@@ -1,0 +1,22 @@
+div#content { background-color: : #e8e8e8;
+background: #c9c9c9;  }
+div#left {
+	float: left;
+	width: 30%;
+}
+div#right {
+	float: right;
+	width: 70%;
+
+}
+footer#footer{
+	background: #00CED1;
+	color: #F0F8FF;
+
+}
+p#phong{
+	color: red;
+}
+div#dat{
+	background: #00FFFF;
+}
