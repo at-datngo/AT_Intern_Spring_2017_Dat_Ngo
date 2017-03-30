@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List&remove</title>
+</head>
+<body>
+	<input type="text" name="js-input" placeholder="input here" value="">
+	<button type="button" name="js-button" id="btn">Submit</button>
+	<div class='show members'>
+	<h1>MEMBERS</h1>
+	<ul id="js-members">
+		
+	</ul>
+	</div>
+	<script type="text/javascript">
+		var $content = document.getElementById('js-members');
+		var $obj = document.getElementsByName('js-input');
+		var $button = document.getElementById('btn');
+		
+
+		$button.addEventListener('click', function(){
+			var $div = document.createElement('div');
+				
+				$div.innerHTML = $obj[0].value;
+				$div.style = "float: left";
+			
+			var $btndelete = document.createElement('button');
+			$btndelete.type = 'button';
+			$btndelete.innerHTML = 'delete';
+			//$btndelete.style = "float: right";
+
+			$btndelete.addEventListener('click', function(){
+				$content.removeChild(this.parentNode);
+			});
+
+			var $li = document.createElement('li');
+			$li.appendChild($div);
+			$li.appendChild($btndelete)
+			
+
+
+			$content.appendChild($li);
+
+		});
+		
+
+	</script>
+</body>
+</html>
+</html>
